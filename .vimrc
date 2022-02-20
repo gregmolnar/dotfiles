@@ -47,11 +47,7 @@ Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'vim-scripts/Align'
-Plugin 'ruby-formatter/rufo-vim'
-Plugin 'prettier/vim-prettier', {
-      \ 'do': 'yarn install --frozen-lockfile --production',
-      \ 'branch': 'master',
-      \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html']}
+Plugin 'dense-analysis/ale'
 
 " List ends here. Plugins become visible to Vim after this call.
 call vundle#end()
@@ -68,11 +64,12 @@ xmap ga <Plug>(EasyAlign)
 
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
+
 set omnifunc=htmlcomplete#CompleteTags
 set omnifunc=syntaxcomplete#Complete
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules
 set wildignore+=log/**,node_modules/**,target/**,tmp/**,*.rbc
-set autoindent
+" set autoindent
 set autoread
 " uncomment to to share the clipboard with system
 " set clipboard=unnamed
@@ -110,8 +107,14 @@ autocmd User Rails silent! Rnavcommand stepdefinition features/step_definitions 
 " automatically rebalance windows on vim resize
 autocmd VimResized * :wincmd =
 
-let g:rufo_auto_formatting = 1
-let g:prettier#autoformat_require_pragma = 0
-let g:prettier#autoformat = 0
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
+" let g:rufo_auto_formatting = 1
+" let g:prettier#autoformat_require_pragma = 0
+" let g:prettier#autoformat = 0
+" autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
 
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'javascript': ['eslint'],
+\   'ruby': ['rubocop']
+\}
+let g:ale_fix_on_save = 1
