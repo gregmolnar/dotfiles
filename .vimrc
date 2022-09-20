@@ -53,7 +53,7 @@ Plugin 'dense-analysis/ale'
 call vundle#end()
 map <C-n> :NERDTreeToggle<CR>
 colorscheme railscasts
-set directory=/tmp
+set directory=/Users/gregmolnar/vimswp
 set number
 syntax enable
 filetype plugin indent on
@@ -118,3 +118,6 @@ let g:ale_fixers = {
 \   'ruby': ['rubocop']
 \}
 let g:ale_fix_on_save = 1
+
+set guifont=JetBrainsMono-Regular:h12
+set backupdir=~/tmp
