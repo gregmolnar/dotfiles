@@ -48,13 +48,17 @@ Plugin 'tpope/vim-surround'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'vim-scripts/Align'
 Plugin 'dense-analysis/ale'
+Plugin 'danilo-augusto/vim-afterglow'
+Plugin 'ajmwagar/vim-deus'
+Plugin 'whatyouhide/vim-gotham'
+Plugin 'NLKNguyen/papercolor-theme'
 
 " List ends here. Plugins become visible to Vim after this call.
 call vundle#end()
 map <C-n> :NERDTreeToggle<CR>
-colorscheme railscasts
-set directory=/Users/gregmolnar/vimswp
+set directory=~/vimswp
 set number
+set colorcolumn=80
 syntax enable
 filetype plugin indent on
 set shiftwidth=2
@@ -88,6 +92,31 @@ nnoremap <leader>] :TagbarToggle<CR>
 nnoremap <leader><space> :call whitespace#strip_trailing()<CR>
 nnoremap <leader>g :GitGutterToggle<CR>
 
+nnoremap <leader><tab> :tabprevious<CR>
+
+"This unsets the "last search pattern" register by hitting return
+nnoremap <CR> :noh<CR><CR>
+set nohlsearch
+
+
+" " Tab navigation like Firefox.
+" nnoremap <C-S-tab> :tabprevious<CR>
+" nnoremap <C-tab>   :tabnext<CR>
+" nnoremap <C-t>     :tabnew<CR>
+" inoremap <C-S-tab> <Esc>:tabprevious<CR>i
+" inoremap <C-tab>   <Esc>:tabnext<CR>i
+" inoremap <C-t>     <Esc>:tabnew<CR>
+
+
+" use system clipboard
+" https://anuragpeshne.github.io/essays/vim/7.html
+" noremap y "*y
+" noremap yy "*yy
+" noremap Y "*y$
+" noremap x "*x
+" noremap dd "*dd
+" noremap D "*D
+" set clipboard+=unnamedplus
 
 " plugin settings
 " let g:ctrlp_match_window = 'order:ttb,max:20'
@@ -119,5 +148,7 @@ let g:ale_fixers = {
 \}
 let g:ale_fix_on_save = 1
 
-set guifont=JetBrainsMono-Regular:h12
+colorscheme PaperColor
+" set guifont=JetBrainsMono-Regular:h12
+set guifont=NotoSansMono-VF:h12
 set backupdir=~/tmp

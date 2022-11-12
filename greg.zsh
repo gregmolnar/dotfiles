@@ -1,5 +1,5 @@
-export BUNDLER_EDITOR='subl'
-export EDITOR='subl -w'
+export BUNDLER_EDITOR='vim'
+export EDITOR='vim'
 source ~/.git-prompt.sh
 
 alias ll='ls -lah'

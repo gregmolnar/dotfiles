@@ -132,7 +132,11 @@ unset key
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/gregmolnar/.oh-my-zsh"
+if [[ `uname` == "Darwin" ]]; then
+  export ZSH="/Users/gregmolnar/.oh-my-zsh"
+else
+  export ZSH="/home/gregmolnar/.oh-my-zsh"
+fi
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -230,3 +234,10 @@ source $ZSH/oh-my-zsh.sh
 export PATH="/usr/local/opt/node@14/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export FZF_DEFAULT_COMMAND='rg --files --follow --no-ignore-vcs --hidden -g "!{*/node_modules/*,.git/*}"'
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init - zsh)"
+export VAGRANT_DEV_SOLO_MEMORY=12288
+export VAGRANT_DEV_SOLO_CORES=8
+
+alias vim="nvim"
+alias open="xdg-open"
