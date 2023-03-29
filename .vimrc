@@ -12,7 +12,7 @@ Plugin 'VundleVim/Vundle.vim'
 " Declare the list of plugins.
 Plugin 'airblade/vim-gitgutter'
 Plugin 'austintaylor/vim-indentobject'
-Plugin 'bronson/vim-trailing-whitespace'
+" Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'editorconfig/editorconfig-vim'
@@ -76,7 +76,7 @@ set wildignore+=log/**,node_modules/**,target/**,tmp/**,*.rbc
 " set autoindent
 set autoread
 " uncomment to to share the clipboard with system
-" set clipboard=unnamed
+set clipboard=unnamed
 set expandtab
 set ruler
 let mapleader = ','
@@ -121,7 +121,7 @@ set nohlsearch
 " plugin settings
 " let g:ctrlp_match_window = 'order:ttb,max:20'
 let g:NERDSpaceDelims=1
-let g:gitgutter_enabled = 0
+let g:gitgutter_enabled = 1
 
 " use the new SnipMate parser
 let g:snipMate = { 'snippet_version' : 1 }
@@ -143,7 +143,10 @@ autocmd VimResized * :wincmd =
 
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'javascript': ['eslint'],
+\   'javascript': ['eslint', 'remove_trailing_lines', 'trim_whitespace'],
+\   'ruby': ['rubocop', 'remove_trailing_lines', 'trim_whitespace']
+\}
+let g:ale_linters = {
 \   'ruby': ['rubocop']
 \}
 let g:ale_fix_on_save = 1
