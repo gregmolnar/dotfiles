@@ -52,6 +52,7 @@ Plugin 'danilo-augusto/vim-afterglow'
 Plugin 'ajmwagar/vim-deus'
 Plugin 'whatyouhide/vim-gotham'
 Plugin 'NLKNguyen/papercolor-theme'
+Plugin 'junegunn/vim-emoji'
 
 " List ends here. Plugins become visible to Vim after this call.
 call vundle#end()
@@ -79,6 +80,7 @@ set autoread
 set clipboard=unnamed
 set expandtab
 set ruler
+
 let mapleader = ','
 noremap <leader>l :Align
 nnoremap <leader>a :Ag<space>
@@ -97,7 +99,6 @@ nnoremap <leader><tab> :tabprevious<CR>
 "This unsets the "last search pattern" register by hitting return
 nnoremap <CR> :noh<CR><CR>
 set nohlsearch
-
 
 " " Tab navigation like Firefox.
 " nnoremap <C-S-tab> :tabprevious<CR>
@@ -155,3 +156,4 @@ colorscheme PaperColor
 " set guifont=JetBrainsMono-Regular:h12
 set guifont=NotoSansMono-VF:h12
 set backupdir=~/tmp
+set pastetoggle=<F2>
