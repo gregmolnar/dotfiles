@@ -239,5 +239,11 @@ eval "$(rbenv init - zsh)"
 export VAGRANT_DEV_SOLO_MEMORY=12288
 export VAGRANT_DEV_SOLO_CORES=8
 
+alias real_vim="vim"
 alias vim="nvim"
 alias open="xdg-open"
+alias gupdate="gco master && git pull && gco - && git rebase master"
+alias gfixup="git add . && git commit -am'tmp' && git rebase -i HEAD~2"
+alias chrome_oproxy="google-chrome --proxy-server='http://localhost:3128'"
+export PATH="$HOME/.phpenv/bin:$PATH"
+eval "$(phpenv init -)"
