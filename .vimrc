@@ -94,7 +94,10 @@ nnoremap <leader>] :TagbarToggle<CR>
 nnoremap <leader><space> :call whitespace#strip_trailing()<CR>
 nnoremap <leader>g :GitGutterToggle<CR>
 
+vnoremap <leader>yc <s-"><s-+>y<Esc>
+
 nnoremap <leader><tab> :tabprevious<CR>
+noremap sa ggVG<CR>
 
 "This unsets the "last search pattern" register by hitting return
 nnoremap <CR> :noh<CR><CR>
