@@ -133,6 +133,9 @@ let g:ale_linters = {
 \   'ruby': ['rubocop']
 \}
 
+let g:ale_virtualtext_cursor = 'disabled'
+
+
 if empty($DISABLE_ALE)
   let g:ale_fix_on_save = 1
 endif
@@ -140,7 +143,14 @@ endif
 let g:markdown_fenced_languages = ['html', 'python', 'ruby', 'vim', 'javascript']
 
 " colorscheme PaperColor
-colorscheme catppuccin-mocha " catppuccin catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
+" colorscheme catppuccin-mocha " catppuccin catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
+" colorscheme tokyonight
+
+" There are also colorschemes for the different styles.
+colorscheme tokyonight-night
+" colorscheme tokyonight-storm
+" colorscheme tokyonight-day
+" colorscheme tokyonight-moon
 
 " set guifont=JetBrainsMono-Regular:h12
 set guifont=NotoSansMono-VF:h12

@@ -72,6 +72,13 @@ require("lazy").setup({
   'vim-test/vim-test',
   'vim-crystal/vim-crystal',
   'whatyouhide/vim-gotham',
+  'AndrewRadev/splitjoin.vim',
+  {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
+  },
   -- 'garbas/vim-snipmate',
   -- 'kkharji/saga.nvim',
   {
@@ -98,7 +105,7 @@ require("lazy").setup({
   },
   { import = "greg.plugins" },
 },
-  {
+{
   install = {
     colorscheme = { "catppuccin" },
   },
