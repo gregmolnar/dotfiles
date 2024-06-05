@@ -247,6 +247,9 @@ alias open="xdg-open"
 alias gupdate="gco master && git pull && gco - && git rebase master"
 alias gfixup="git add . && git commit -am'tmp' && git rebase -i HEAD~2"
 alias chrome_oproxy="google-chrome --proxy-server='http://localhost:3128'"
+alias pbcopy="xsel --input --clipboard"
+alias pbpaste="xsel --output --clipboard"
+
 export PATH="$HOME/.phpenv/bin:$PATH"
 eval "$(phpenv init -)"
 # export PATH="$HOME/.local/bin:$PATH"
@@ -256,3 +259,4 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 alias lzd='lazydocker'
+if [ -f "/home/gregmolnar/.config/fabric/fabric-bootstrap.inc" ]; then . "/home/gregmolnar/.config/fabric/fabric-bootstrap.inc"; fi

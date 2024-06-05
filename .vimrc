@@ -141,17 +141,17 @@ if empty($DISABLE_ALE)
 endif
 
 let g:markdown_fenced_languages = ['html', 'python', 'ruby', 'vim', 'javascript']
-
+set background=dark " or light if you want light mode
+colorscheme gruvbox
 " colorscheme PaperColor
-" colorscheme catppuccin-mocha " catppuccin catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
+" colorscheme catppuccin-macchiato " catppuccin catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
 " colorscheme tokyonight
 
 " There are also colorschemes for the different styles.
-colorscheme tokyonight-night
+" colorscheme tokyonight-night
 " colorscheme tokyonight-storm
 " colorscheme tokyonight-day
 " colorscheme tokyonight-moon
-
 " set guifont=JetBrainsMono-Regular:h12
 set guifont=NotoSansMono-VF:h12
 set backupdir=~/tmp

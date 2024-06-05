@@ -73,14 +73,7 @@ require("lazy").setup({
   'vim-crystal/vim-crystal',
   'whatyouhide/vim-gotham',
   'AndrewRadev/splitjoin.vim',
-  {
-    "folke/tokyonight.nvim",
-    lazy = false,
-    priority = 1000,
-    opts = {},
-  },
-  -- 'garbas/vim-snipmate',
-  -- 'kkharji/saga.nvim',
+{ "ellisonleao/gruvbox.nvim", priority = 1000 , config = true},
   {
     'nvim-telescope/telescope.nvim', tag = '0.1.4',
     dependencies = { 'nvim-lua/plenary.nvim' }
