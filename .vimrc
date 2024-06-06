@@ -156,3 +156,6 @@ colorscheme gruvbox
 set guifont=NotoSansMono-VF:h12
 set backupdir=~/tmp
 set pastetoggle=<F2>
+
+set textwidth=80
+au BufRead,BufNewFile *.md setlocal textwidth=80

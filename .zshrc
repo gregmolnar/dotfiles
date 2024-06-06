@@ -202,7 +202,7 @@ ZSH_THEME="greg"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git bundler colorize gem git-extras github git-hubflow macos node rails ruby)
+plugins=(git bundler colorize gem git-extras github git-hubflow macos node rails ruby asdf)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -255,8 +255,10 @@ eval "$(phpenv init -)"
 # export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 alias lzd='lazydocker'
+
 if [ -f "/home/gregmolnar/.config/fabric/fabric-bootstrap.inc" ]; then . "/home/gregmolnar/.config/fabric/fabric-bootstrap.inc"; fi
