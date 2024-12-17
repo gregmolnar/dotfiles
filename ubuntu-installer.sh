@@ -18,7 +18,7 @@ ln -sfn ~/git/dotfiles/alacritty ~/.config/alacritty
 sudo apt install -y xournalpp neovim zsh git
 
 git config --global user.email 'molnargerg@gmail.com'
-git config --global user.name 'molnargerg@gmail.com'
+git config --global user.name 'Greg Molnar'
 
 chsh -s $(which zsh)
 
