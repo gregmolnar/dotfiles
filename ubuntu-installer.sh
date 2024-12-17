@@ -4,11 +4,16 @@ ln -s ~/git/dotfiles/.vimrc ~/
 ln -s ~/git/dotfiles/.zshrc ~/
 ln -s ~/git/dotfiles/.git-prompt.sh ~/
 
+
+ln -s ~/git/dotfiles/nvim ~/.config/
+ln -s ~/git/dotfiles/alacritty ~/.config/
+ln -s ~/git/dotfiles/lsd ~/.config/
+
 # alacritty
 sudo apt install -y alacritty
 ln -sfn ~/git/dotfiles/alacritty ~/.config/alacritty
 
-sudo apt install -y xournalpp
+sudo apt install -y xournalpp neovim
 
 # fuzzysearch
 sudo apt install fzf bat ripgrep silversearcher-ag perl universal-ctags
