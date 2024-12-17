@@ -20,6 +20,7 @@ sudo apt install -y xournalpp neovim zsh
 chsh -s $(which zsh)
 
 curl https://sh.rustup.rs -sSf | sh
+. "$HOME/.cargo/env"
 rustup update
 cargo install --locked zellij
 
