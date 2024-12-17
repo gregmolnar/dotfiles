@@ -1,3 +1,9 @@
+# symlink files
+ln -s ~/git/dotfiles/.zimrc ~/
+ln -s ~/git/dotfiles/.vimrc ~/
+ln -s ~/git/dotfiles/.zshrc ~/
+ln -s ~/git/dotfiles/.git-prompt.sh ~/
+
 # alacritty
 sudo apt install -y alacritty
 ln -sfn ~/git/dotfiles/alacritty ~/.config/alacritty
