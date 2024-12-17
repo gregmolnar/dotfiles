@@ -7,6 +7,8 @@ sudo apt install -y xournalpp
 # fuzzysearch
 sudo apt install fzf bat ripgrep silversearcher-ag perl universal-ctags
 
+sudo snap install pinta
+
 # lazydocker
 if ! [ -x "$(command -v lazydocker)" ]; then
   echo "Installing lazydocker"

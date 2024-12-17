@@ -202,7 +202,7 @@ ZSH_THEME="greg"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git bundler colorize gem git-extras github git-hubflow macos node rails ruby asdf)
+plugins=(git bundler colorize gem git-extras github git-hubflow macos node rails asdf)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -235,9 +235,6 @@ export PATH="/usr/local/opt/node@14/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export FZF_DEFAULT_COMMAND='rg --files --follow --no-ignore-vcs --hidden -g "!{*/node_modules/*,.git/*}"'
 
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init - zsh)"
-
 export VAGRANT_DEV_SOLO_MEMORY=12288
 export VAGRANT_DEV_SOLO_CORES=8
 
@@ -250,6 +247,11 @@ alias chrome_oproxy="google-chrome --proxy-server='http://localhost:3128'"
 alias pbcopy="xsel --input --clipboard"
 alias pbpaste="xsel --output --clipboard"
 
+alias lg="lazygit"
+alias lld="lazydocker"
+
+alias dc="docker compose"
+
 export PATH="$HOME/.phpenv/bin:$PATH"
 eval "$(phpenv init -)"
 # export PATH="$HOME/.local/bin:$PATH"
@@ -261,4 +263,7 @@ export PATH="$HOME/.local/bin:$PATH"
 
 alias lzd='lazydocker'
 
-if [ -f "/home/gregmolnar/.config/fabric/fabric-bootstrap.inc" ]; then . "/home/gregmolnar/.config/fabric/fabric-bootstrap.inc"; fi
+# if [ -f "/home/gregmolnar/.config/fabric/fabric-bootstrap.inc" ]; then . "/home/gregmolnar/.config/fabric/fabric-bootstrap.inc"; fi
+
+eval "$(zoxide init zsh)"
+eval "$(/home/gregmolnar/.local/bin/mise activate zsh)"
