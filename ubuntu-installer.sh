@@ -15,7 +15,14 @@ dconf load /org/gnome/shell/extensions/gtile/ < ~/git/dotfiles/gtile.config
 sudo apt install -y alacritty
 ln -sfn ~/git/dotfiles/alacritty ~/.config/alacritty
 
-sudo apt install -y xournalpp neovim
+sudo apt install -y xournalpp neovim zsh
+
+chsh -s $(which zsh)
+
+curl https://sh.rustup.rs -sSf | sh
+rustup update
+cargo install --locked zellij
+
 
 # fuzzysearch
 sudo apt install fzf bat ripgrep silversearcher-ag perl universal-ctags
