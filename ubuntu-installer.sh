@@ -9,6 +9,8 @@ ln -s ~/git/dotfiles/nvim ~/.config/
 ln -s ~/git/dotfiles/alacritty ~/.config/
 ln -s ~/git/dotfiles/lsd ~/.config/
 
+dconf load /org/gnome/shell/extensions/gtile/ < ~/git/dotfiles/gtile.config
+
 # alacritty
 sudo apt install -y alacritty
 ln -sfn ~/git/dotfiles/alacritty ~/.config/alacritty
