@@ -15,7 +15,10 @@ dconf load /org/gnome/shell/extensions/gtile/ < ~/git/dotfiles/gtile.config
 sudo apt install -y alacritty
 ln -sfn ~/git/dotfiles/alacritty ~/.config/alacritty
 
-sudo apt install -y xournalpp neovim zsh
+sudo apt install -y xournalpp neovim zsh git
+
+git config --global user.email 'molnargerg@gmail.com'
+git config --global user.name 'molnargerg@gmail.com'
 
 chsh -s $(which zsh)
 
