@@ -252,8 +252,6 @@ alias lld="lazydocker"
 
 alias dc="docker compose"
 
-export PATH="$HOME/.phpenv/bin:$PATH"
-eval "$(phpenv init -)"
 # export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 
