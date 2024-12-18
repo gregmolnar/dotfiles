@@ -22,6 +22,8 @@ git config --global user.name 'Greg Molnar'
 
 chsh -s $(which zsh)
 
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+
 curl https://sh.rustup.rs -sSf | sh
 . "$HOME/.cargo/env"
 rustup update
