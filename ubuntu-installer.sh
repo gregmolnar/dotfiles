@@ -33,6 +33,8 @@ cargo install --locked zellij
 
 curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
 
+curl https://mise.run | sh
+
 # fuzzysearch
 sudo apt install fzf bat ripgrep silversearcher-ag perl universal-ctags
 
