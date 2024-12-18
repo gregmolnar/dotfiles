@@ -33,6 +33,8 @@ curl https://sh.rustup.rs -sSf | sh
 rustup update
 cargo install --locked zellij
 
+sudo apt-get install autoconf patch build-essential rustc libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libgmp-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev uuid-dev -y
+
 wget "https://github.com/sharkdp/vivid/releases/download/v0.8.0/vivid_0.8.0_amd64.deb"
 sudo dpkg -i vivid_0.8.0_amd64.deb
 curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
