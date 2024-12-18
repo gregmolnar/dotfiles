@@ -25,12 +25,16 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 rm ~/.zshrc
 ln -s ~/git/dotfiles/.zshrc ~/
+ln -s ~/git/dotfiles/greg.zsh-theme ~/.oh-my-zsh/custom/themes
+ln -s ~/git/dotfiles/greg.zsh ~/.oh-my-zsh/custom/
 
 curl https://sh.rustup.rs -sSf | sh
 . "$HOME/.cargo/env"
 rustup update
 cargo install --locked zellij
 
+wget "https://github.com/sharkdp/vivid/releases/download/v0.8.0/vivid_0.8.0_amd64.deb"
+sudo dpkg -i vivid_0.8.0_amd64.deb
 curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
 
 curl https://mise.run | sh
