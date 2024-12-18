@@ -1,7 +1,6 @@
 # symlink files
 ln -s ~/git/dotfiles/.zimrc ~/
 ln -s ~/git/dotfiles/.vimrc ~/
-ln -s ~/git/dotfiles/.zshrc ~/
 ln -s ~/git/dotfiles/.git-prompt.sh ~/
 
 
@@ -23,6 +22,9 @@ git config --global user.name 'Greg Molnar'
 chsh -s $(which zsh)
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+
+rm ~/.zshrc
+ln -s ~/git/dotfiles/.zshrc ~/
 
 curl https://sh.rustup.rs -sSf | sh
 . "$HOME/.cargo/env"
