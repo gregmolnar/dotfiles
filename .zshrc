@@ -265,3 +265,5 @@ alias lzd='lazydocker'
 
 eval "$(zoxide init zsh)"
 eval "$(/home/gregmolnar/.local/bin/mise activate zsh)"
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
