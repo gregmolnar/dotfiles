@@ -73,6 +73,7 @@ require("lazy").setup({
   'vim-crystal/vim-crystal',
   'whatyouhide/vim-gotham',
   'AndrewRadev/splitjoin.vim',
+  'wsdjeg/vim-fetch',
 { "ellisonleao/gruvbox.nvim", priority = 1000 , config = true},
   {
     'nvim-telescope/telescope.nvim', tag = '0.1.4',
